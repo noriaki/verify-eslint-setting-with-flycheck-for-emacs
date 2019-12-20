@@ -1,0 +1,26 @@
+{
+  "name": "verify-eslint-setting-with-flycheck-for-emacs",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noriaki/verify-eslint-setting-with-flycheck-for-emacs.git"
+  },
+  "author": "Noriaki Uchiyama <uchiyama.noriaki@gmail.com> (https://github.com/noriaki)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noriaki/verify-eslint-setting-with-flycheck-for-emacs/issues"
+  },
+  "homepage": "https://github.com/noriaki/verify-eslint-setting-with-flycheck-for-emacs#readme",
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-plugin-react": "^7.17.0"
+  },
+  "dependencies": {
+    "react": "^16.12.0"
+  }
+}
