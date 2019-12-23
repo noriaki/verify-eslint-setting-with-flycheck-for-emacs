@@ -1,3 +1,18 @@
+/*
+ * Usage:
+ *
+ *  $ yarn add --dev typescript // to avoid errors in `npx eslint --init`
+ *  $ npx eslint --init         // select options and npm install
+ *  $ rm package-lock.json      // to not using npm
+ *  $ yarn install              // to generate yarn.lock
+ *  $ yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
+ *  $ touch .eslintrc.js        // and edit (this file)
+ *  $ touch prettier.config.js  // and edit
+ *
+ */
+
+const allowExtensions = ['.js', '.jsx', '.ts', '.tsx'];
+
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -11,6 +26,12 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
+  },
+  settings: {
+    'import/extensions': allowExtensions,
+    'import/resolver': {
+      node: { extensions: allowExtensions },
+    },
   },
   globals: {
     Atomics: 'readonly',
@@ -28,5 +49,20 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { argsIgnorePattern: '^_' },
+    ],
+    'react/prop-types': 'off',
+    'react/jsx-filename-extension': [
+      'error',
+      { extensions: allowExtensions },
+    ],
+    'import/extensions': [
+      'error',
+      'always',
+      { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' },
+    ],
   },
 };
