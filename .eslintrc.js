@@ -2,7 +2,8 @@
  * Usage:
  *
  *  $ yarn add --dev typescript // to avoid errors in `npx eslint --init`
- *  $ npx eslint --init         // select options and npm install
+ *  $ npx eslint --init         // select options and npm install (airbnb, ts)
+ *  $ yarn add --dev eslint-config-airbnb-typescript // decorate airbnb with ts
  *  $ rm package-lock.json      // to not using npm
  *  $ yarn install              // to generate yarn.lock
  *  $ yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
@@ -42,7 +43,9 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'airbnb',
+    // https://github.com/iamturns/eslint-config-airbnb-typescript#i-wish-this-config-would-support-
+    'airbnb-typescript',
+    // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb#eslint-configairbnbhooks
     'airbnb/hooks',
     // https://github.com/jest-community/eslint-plugin-jest#recommended
     'plugin:jest/recommended',
@@ -55,6 +58,7 @@ module.exports = {
   /*
   plugins: [
     '@typescript-eslint', // included in 'plugin:@typescript-eslint/recommended'
+    'react-hooks',        // included in 'airbnb/hooks'
     'jest',               // included in 'plugin:jest/recommended'
     'prettier',           // included in 'plugin:prettier/recommended'
   ],
