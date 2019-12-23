@@ -17,7 +17,6 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   extends: [
-    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'airbnb',
@@ -26,14 +25,8 @@ module.exports = {
     'prettier/@typescript-eslint',
   ],
   plugins: [
-    'react',
     '@typescript-eslint',
   ],
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
   rules: {
   },
 };
