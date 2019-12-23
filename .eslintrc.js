@@ -38,16 +38,27 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   extends: [
-    'plugin:@typescript-eslint/recommended',
+    // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#recommended-configs
+    'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
     'airbnb',
     'airbnb/hooks',
+    // https://github.com/jest-community/eslint-plugin-jest#recommended
+    'plugin:jest/recommended',
+    'plugin:jest/style',
+    // https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
     'plugin:prettier/recommended',
     'prettier/@typescript-eslint',
+    'prettier/react',
   ],
+  /*
   plugins: [
-    '@typescript-eslint',
+    '@typescript-eslint', // included in 'plugin:@typescript-eslint/recommended'
+    'jest',               // included in 'plugin:jest/recommended'
+    'prettier',           // included in 'plugin:prettier/recommended'
   ],
+  */
   rules: {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
