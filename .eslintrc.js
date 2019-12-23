@@ -27,6 +27,7 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
+    // jest: true, // included in 'plugin:jest/recommended'
   },
   settings: {
     'import/extensions': allowExtensions,
