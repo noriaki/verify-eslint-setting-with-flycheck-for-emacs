@@ -16,11 +16,6 @@
     "url": "https://github.com/noriaki/verify-eslint-setting-with-flycheck-for-emacs/issues"
   },
   "homepage": "https://github.com/noriaki/verify-eslint-setting-with-flycheck-for-emacs#readme",
-  "devDependencies": {
-    "eslint": "^6.7.2",
-    "eslint-plugin-react": "^7.17.0"
-  },
-  "dependencies": {
-    "react": "^16.12.0"
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
